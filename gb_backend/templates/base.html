@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Glowing Barnacle</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="{{STATIC_URL}}/css/site.css">
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center">Glowing Barnacle</h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Glowing Barnacle</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Header -->
+  <div class="w3-container w3-center">
+    <h1 class="w3-jumbo"><b>Glowing Barnacle</b></h1>
+    <p>Improve the qualities of you old images.</p>
+  </div>
+
+  <div class="w3-container w3-dark-grey w3-padding-32 w3-padding-large">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Test our product right now !</b></h4>
+    </div>
+    <div class= "w3-light-grey" id="drop-region">
+      <p>Drop an image <br/>or click to upload it! </p>
+    </div>
+
+    <!--<div class="w3-content" style="max-width:600px">
+      <img src="{{STATIC_URL}}img/Lenna.png" alt="Lenna" class="w3-image w3-padding-32" width="600" height="650">
+    </div>-->
+
+  </div>
+
+
+  <!-- Photo grid -->
+  <div class="w3-container w3-center w3-text-light-grey w3-padding-32">
+    <div id="image-preview">
+    </div>
+  </div>
+
+
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About us</b></h4>
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique nec leo ac elementum. Aenean convallis suscipit lorem, ac sollicitudin felis. Aenean quis elit ac neque molestie ultricies ac quis augue. Vivamus vehicula mauris eget posuere euismod. Pellentesque lectus sem, viverra vel egestas quis, cursus vel velit. Phasellus non massa ullamcorper, sagittis ligula ut, molestie ligula. Nullam nec lacus et dolor rhoncus fermentum sit amet eu urna. Nulla vitae tortor tempor, pretium diam quis, egestas nisl. Nullam consectetur lacus ut urna dignissim, a tincidunt nulla gravida. Sed ullamcorper non turpis id accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque eu elit pretium lacus ullamcorper ullamcorper id eu erat. Nulla pulvinar iaculis dictum. Aenean tincidunt hendrerit nulla, vitae tempor velit suscipit sit amet. Phasellus ut lacus blandit, fermentum tortor sed, pretium quam. Nulla quis tellus nibh.
+      </p>
+
+      <h4 class="w3-padding-16">How much we charge</h4>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+            <li class="w3-padding-16">Photography</li>
+            <li class="w3-padding-16">5GB Storage</li>
+            <li class="w3-padding-16">Mail Support</li>
+            <li class="w3-padding-16">
+              <h2>$ 10</h2>
+              <span class="w3-opacity">per month</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="w3-half">
+          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+            <li class="w3-padding-16">Photography</li>
+            <li class="w3-padding-16">50GB Storage</li>
+            <li class="w3-padding-16">Endless Support</li>
+            <li class="w3-padding-16">
+              <h2>$ 35</h2>
+              <span class="w3-opacity">per month</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button w3-white w3-padding-large">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Us</b></h4>
+      <p>Do you want us to improve your images ?  Fill out the form with the details.</p>
+      <form action="#" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="w3-black w3-center w3-padding-24">
+    Project realised by <a href="maxime-barbier.fr" target="_blank" class="w3-hover-opacity">maxime-barbier.fr</a>
+  </div>
+
+
+<!-- End page content -->
+</div>
+<script src="{{STATIC_URL}}js/site.js"></script>
+</body>
+</html>

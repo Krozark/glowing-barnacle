@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div id="app">
+      <p>Hello world! This is an HTML5 Boilerplate.</p>
+      <p><% message %></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        delimiters: ['<%', '%>'],
+        data: {
+          message: 'Hello Vue!'
+        }
+      })
+    </script>
+  </body>
+</html>
